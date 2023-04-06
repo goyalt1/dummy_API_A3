@@ -44,7 +44,7 @@ There are three parameters:
     },
     ...
     ],
-    "Status code": <int>
+    "Status code": "<int>"
   }
 ```
 ## Sample Requests
