@@ -37,10 +37,10 @@ There are three parameters:
     "CourseName": "<string>",
     "Prerequisites": "<string>",
     "Description": "<string>",
-    "Credits": <int>,
-    "Attribute": <string>,
-    "Term": <string>,
-    "Year": <int>
+    "Credits": "<int>",
+    "Attribute": "<string>",
+    "Term": "<string>",
+    "Year": "<int>"
     },
     ...
     ],
