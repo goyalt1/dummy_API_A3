@@ -1,13 +1,16 @@
 # UofM Find Course API
 This API is designed to support enrollment at UofM. This set of APIs would provide a list of information related to the courses they are interested in. Students could specify relevant parameters such as Year, Term and CourseID to retrieve course information.
+
 ## API description
 Our API is a simple REST API, where user can do GET requests to the endpoint.
 
 ## Endpoints and Parameters
-#### Endpoint
+
+  ### Endpoint
 There is only one endpoint.  
 ```https://UofMCSEnrollment.ca/api/courses?{Year}&{Term}&{CourseID}```
-#### Patameters
+
+  ### Patameters
 There are three parameters:
 | Parameter  | Type   | Description  | Required  |
 |------------|--------|--------------|-----------|
@@ -28,7 +31,7 @@ There are three parameters:
 | Year | int | The year the course is being offered in. |
 | Status code | int | The code indicating if the request was a success/fail. |
 
-### Response JSON Description
+  ### JSON Resource Description
 ```json
   {
      "Courses": [
@@ -50,15 +53,13 @@ There are three parameters:
 ## Sample Requests
 Here are the three sample requests for getting course information from our API:
 
-### 1.List all Computer Science courses in a specific academic year.
+### 1. List all Computer Science courses in a specific academic year.
 ```https://UofMCSEnrollment.ca/api/courses?{Year}```
 
-####  GET Request
- ```
-    https://UofMCSEnrollment.ca/api/courses?{2023}
-  ```
+  ####  Sample Request 1
+ ``` https://UofMCSEnrollment.ca/api/courses?{2023} ```
 
-#### Response
+  #### Response
 ```json
   {
   "Courses": [
@@ -86,15 +87,14 @@ Here are the three sample requests for getting course information from our API:
   "Status code": 200
 }
 ```
+---
 ### 2. List all Computer Science courses in a specific academic year and term.
 ```https://UofMCSEnrollment.ca/api/courses?{Year}&{Term}```
 
-#### GET Request
-```
-https://UofMCSEnrollment.ca/api/courses?{2023}&{Winter}
-```
+  #### Sample Request 2
+``` https://UofMCSEnrollment.ca/api/courses?{2023}&{Winter} ```
   
-#### Response
+  #### Response
 ```json
   {
   "Courses": [
@@ -122,17 +122,16 @@ https://UofMCSEnrollment.ca/api/courses?{2023}&{Winter}
   "Status code": 200
 }
 ```
+---
 
 ### 3. List a specific Computer Science course in a specific academic year and term.
 ```https://UofMCSEnrollment.ca/api/courses?{Year}&{Term}&{CourseID}```
 
- #### GET Request
+  #### GET Request
 
-  ```
-  https://UofMCSEnrollment.ca/api/courses?{2023}&{Winter}&{COMP3430}
-  ```
+  ``` https://UofMCSEnrollment.ca/api/courses?{2023}&{Winter}&{COMP3430} ```
 
-### Response 
+  #### Response 
 ```json
   {
   "Courses": [
